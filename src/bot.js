@@ -40,7 +40,7 @@ const bots =
 each(bots, bot => {
   bot.onEvent(async ctx => {
     if (ctx.event.isImage) {
-      const link = await generateImage(ctx.event.image.id, 'PRO);
+      const link = await generateImage(ctx.event.image.id, 'PRO');
       await ctx.sendImage({ originalContentUrl: link });
     }
   });
