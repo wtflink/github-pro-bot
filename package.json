@@ -1,0 +1,118 @@
+{
+  "private": true,
+  "name": "github-pro-bot",
+  "license": "UNLICENSED",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "npm run clean && babel src -d lib --ignore **/__tests__,**/__mocks__ --copy-files",
+    "clean": "rimraf lib",
+    "precommit": "lint-staged",
+    "dev": "cross-env NODE_ENV=development nodemon bin/start",
+    "ld": "ttab ngrok http 5000 && ttab btd messenger webhook set && ttab mongod && npm run dev",
+    "ldw": "ttab -w ngrok http 5000 && ttab -w btd messenger webhook set && ttab -w mongod && npm run dev",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "lint:staged": "lint-staged",
+    "prepublish": "npm run build",
+    "start": "node bin/start",
+    "test": "npm run lint && npm run testonly",
+    "testonly": "jest",
+    "testonly:cov": "jest --coverage --runInBand --forceExit",
+    "testonly:watch": "jest --runInBand --watch",
+    "preversion": "npm run test"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "axios-retry": "^3.1.1",
+    "bottender": "^0.15.15",
+    "bottender-compose": "^0.12.6",
+    "cross-env": "^5.2.0",
+    "debug": "^4.1.1",
+    "dotenv": "^6.2.0",
+    "gm": "^1.23.1",
+    "invariant": "^2.2.4",
+    "koa": "^2.6.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "lodash": "^4.17.11",
+    "monk": "^6.0.6",
+    "thenify": "^3.3.0",
+    "tmp": "^0.0.33",
+    "warning": "^4.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.2.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/register": "^7.0.0",
+    "@yoctol/eslint-plugin-kurator": "^0.6.47-beta.2",
+    "babel-core": "^7.0.0-0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.12.0",
+    "eslint-config-yoctol-base": "^0.18.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-sort-imports-es6-autofix": "^0.3.0",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.0",
+    "nodemon": "^1.18.9",
+    "prettier": "^1.15.3",
+    "prettier-package-json": "^2.0.1",
+    "rimraf": "^2.6.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/__tests__/",
+      "/lib/"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/examples/",
+      "/lib/"
+    ],
+    "transformIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "testEnvironment": "node",
+    "reporters": [
+      "default",
+      "jest-junit"
+    ],
+    "resetModules": true,
+    "resetMocks": true
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{json,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "package.json": [
+      "prettier-package-json --write",
+      "prettier --write",
+      "git add"
+    ],
+    ".babelrc": [
+      "prettier --parser json --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "singleQuote": true
+  }
+}

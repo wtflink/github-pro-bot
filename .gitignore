@@ -1,0 +1,23 @@
+# dependency
+node_modules
+package-lock.json
+
+# files
+.DS_Store
+.env
+value.yml
+
+# logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# test
+coverage
+junit.xml
+jest-report
+
+# build
+lib
