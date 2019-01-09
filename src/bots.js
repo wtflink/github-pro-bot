@@ -8,7 +8,7 @@ import { each } from 'lodash';
 
 import config from '../bottender.config';
 
-import generateImage from './generateImage';
+import handler from './handler';
 import { MONGO_URL } from './database';
 
 export const sessionStore = new MongoSessionStore(MONGO_URL);
@@ -38,15 +38,9 @@ const bots =
       };
 
 each(bots, bot => {
-  bot.onEvent(async ctx => {
-    if (ctx.event.isImage && ctx.platform === 'line') {
-      const link = await generateImage({
-        lineMessageId: ctx.event.image.id,
-        text: 'PRO',
-      });
-      await ctx.sendImage({ originalContentUrl: link });
-    }
-  });
+  bot.setInitialState({ inputingText: false, lineImageId: null });
+
+  bot.onEvent(handler);
 });
 
 export default bots;
