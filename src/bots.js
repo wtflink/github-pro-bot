@@ -8,8 +8,8 @@ import { each } from 'lodash';
 
 import config from '../bottender.config';
 
-import { MONGO_URL } from './database';
 import generateImage from './generateImage';
+import { MONGO_URL } from './database';
 
 export const sessionStore = new MongoSessionStore(MONGO_URL);
 
@@ -39,8 +39,11 @@ const bots =
 
 each(bots, bot => {
   bot.onEvent(async ctx => {
-    if (ctx.event.isImage) {
-      const link = await generateImage(ctx.event.image.id, 'PRO');
+    if (ctx.event.isImage && ctx.platform === 'line') {
+      const link = await generateImage({
+        lineMessageId: ctx.event.image.id,
+        text: 'PRO',
+      });
       await ctx.sendImage({ originalContentUrl: link });
     }
   });

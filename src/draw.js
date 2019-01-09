@@ -1,4 +1,4 @@
-// This is the testing function, directly call the generating function if needed
+// This is the local testing function, directly call the generating function if needed
 // eslint-disable-next-line import/no-extraneous-dependencies
 require('@babel/register');
 require('dotenv').config();
@@ -14,7 +14,7 @@ process.on('unhandledRejection', (e, p) => {
 
 async function draw() {
   /* eslint-enable no-console */
-  console.log(await generateImage('PRO'));
+  console.log(await generateImage({ text: 'PRO' }));
 }
 
 draw();

@@ -10,8 +10,8 @@ if (process.env.NODE_ENV === 'development') {
 if (process.env.USE_CONSOLE_BOT === 'true') {
   const bots =
     process.env.NODE_ENV === 'development'
-      ? require('../src/bot').default
-      : require('../lib/bot').default;
+      ? require('../src/bots').default
+      : require('../lib/bots').default;
   bots.consoleBot.createRuntime();
 } else {
   const server =

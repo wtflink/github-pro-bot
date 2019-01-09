@@ -1,9 +1,6 @@
 import { createServer } from 'bottender/koa';
 
-import config from '../bottender.config';
-
-import bots from './bot';
-import db from './database';
+import bots from './bots';
 
 const server = createServer(bots.line);
 

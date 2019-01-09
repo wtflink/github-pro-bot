@@ -5,7 +5,6 @@ package-lock.json
 # files
 .DS_Store
 .env
-value.yml
 
 # logs
 logs

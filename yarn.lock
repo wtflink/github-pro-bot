@@ -746,21 +746,6 @@
     "@types/events" "*"
     "@types/node" "*"
 
-"@yoctol/eslint-plugin-kurator@^0.6.47-beta.2":
-  version "0.6.47-beta.2"
-  resolved "https://registry.yarnpkg.com/@yoctol/eslint-plugin-kurator/-/eslint-plugin-kurator-0.6.47-beta.2.tgz#79e1323f30766577c8bd550a6bdba21f83781e27"
-  integrity sha512-BGB4bJfppp23yPjKQKB1PdyPGKbeGsf7cG3ZxiAL4zTMVkKboEdq38qce/WPowg3GCSI9UB0agYcXX7kk6Foqw==
-
-"@yoctol/static@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@yoctol/static/-/static-0.0.4.tgz#86ba3e868d28c631cda200120d197760a397bfb7"
-  integrity sha512-TDBcguBvTDlA/tO1FngPBDbgZptXZLIR7pCEdViBvt3/qJkTgpkTWoUWLLZrGSktzOT32gq1tMWlZe5MEnxS0A==
-  dependencies:
-    form-data "^2.1.4"
-    http-status "^1.0.1"
-    invariant "^2.2.2"
-    node-fetch "^1.6.3"
-
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -1258,13 +1243,6 @@ axios-error@^0.7.11:
   resolved "https://registry.yarnpkg.com/axios-error/-/axios-error-0.7.11.tgz#b4fb2ee20491146e6aaa23bcf29e92ca933a9b68"
   integrity sha512-Oq7HbcAIabBcanV8qu950ZiyszlrXvKyMdYKOWveet6Vzy9ey1moyT8asWyTSlKJ5DYG4nEPMirdhxfUw/Dp7w==
 
-axios-retry@^3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/axios-retry/-/axios-retry-3.1.1.tgz#88d2971f671a9023b21d887c5dcac6c54f332cde"
-  integrity sha512-BeNOxa/CBQQLa9gVuMta1oWIhbL6UETKBfAmFjOXwiBxgcmrDBVVwz/gKZTpzKJlVjmi5DeYC+lP5Ng7ssc1pg==
-  dependencies:
-    is-retry-allowed "^1.1.0"
-
 axios@^0.18.0:
   version "0.18.0"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.18.0.tgz#32d53e4851efdc0a11993b6cd000789d70c05102"
@@ -1344,18 +1322,6 @@ body-parser@1.18.3, body-parser@^1.18.3:
     qs "6.5.2"
     raw-body "2.3.3"
     type-is "~1.6.16"
-
-bottender-compose@^0.12.6:
-  version "0.12.6"
-  resolved "https://registry.yarnpkg.com/bottender-compose/-/bottender-compose-0.12.6.tgz#ae85bd62bc1e6ddd25190a442294c81190d20707"
-  integrity sha512-6rmU4Lr4jf3QvV+Ek7UFYCnKdFBkKsjDodIpP846+He5b8tZZt9tK/CYVxkMNVqb6yZWXzF4eUFk6a4N6qqh2Q==
-  dependencies:
-    delay "^4.1.0"
-    invariant "^2.2.4"
-    lodash "^4.17.11"
-    noop2 "^2.0.0"
-    random-item "^1.0.0"
-    warning "^4.0.2"
 
 bottender@^0.15.15:
   version "0.15.15"
@@ -2237,13 +2203,6 @@ encodeurl@~1.0.2:
   resolved "https://registry.yarnpkg.com/encodeurl/-/encodeurl-1.0.2.tgz#ad3ff4c86ec2d029322f5a02c3a9a606c95b3f59"
   integrity sha1-rT/0yG7C0CkyL1oCw6mmBslbP1k=
 
-encoding@^0.1.11:
-  version "0.1.12"
-  resolved "https://registry.yarnpkg.com/encoding/-/encoding-0.1.12.tgz#538b66f3ee62cd1ab51ec323829d1f9480c74beb"
-  integrity sha1-U4tm8+5izRq1HsMjgp0flIDHS+s=
-  dependencies:
-    iconv-lite "~0.4.13"
-
 end-of-stream@^1.1.0:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/end-of-stream/-/end-of-stream-1.4.1.tgz#ed29634d19baba463b6ce6b80a37213eab71ec43"
@@ -2886,7 +2845,7 @@ for-own@^1.0.0:
   dependencies:
     for-in "^1.0.1"
 
-form-data@^2.1.4, form-data@^2.3.1, form-data@^2.3.2:
+form-data@^2.3.1, form-data@^2.3.2:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/form-data/-/form-data-2.3.3.tgz#dcce52c05f644f298c6a7ab936bd724ceffbf3a6"
   integrity sha512-1lLKB2Mu3aGP1Q/2eCOx0fNbRMe7XdwktwOruhfqqd0rIJWwN4Dh+E3hrPSlDCXnSR7UtZ1N38rVXm+6+MEhJQ==
@@ -3254,11 +3213,6 @@ http-signature@^1.2.0:
     jsprim "^1.2.2"
     sshpk "^1.7.0"
 
-http-status@^1.0.1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/http-status/-/http-status-1.3.1.tgz#340a500e778a3091d18fda026df80f104a02dde7"
-  integrity sha512-PcI9NUm6EUOhHlaxYABCqDQQWS7IgoBZ/PmPkhuzj+oR01ffjv3EJfKnnWJZcUhILtUh6/NdJi1Zs/mIr6v8DA==
-
 husky@^1.3.1:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/husky/-/husky-1.3.1.tgz#26823e399300388ca2afff11cfa8a86b0033fae0"
@@ -3287,7 +3241,7 @@ iconv-lite@0.4.23:
   dependencies:
     safer-buffer ">= 2.1.2 < 3"
 
-iconv-lite@^0.4.17, iconv-lite@^0.4.24, iconv-lite@^0.4.4, iconv-lite@~0.4.13:
+iconv-lite@^0.4.17, iconv-lite@^0.4.24, iconv-lite@^0.4.4:
   version "0.4.24"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.24.tgz#2022b4b25fbddc21d2f524974a474aafe733908b"
   integrity sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==
@@ -3691,7 +3645,7 @@ is-resolvable@^1.0.0:
   resolved "https://registry.yarnpkg.com/is-resolvable/-/is-resolvable-1.1.0.tgz#fb18f87ce1feb925169c9a407c19318a3206ed88"
   integrity sha512-qgDYXFSR5WvEfuS5dMj6oTMEbrrSaM0CrFk2Yiq/gXnBvD9pMa2jGXxyhGLfvhZpuMZe18CJpFxAt3CRs42NMg==
 
-is-retry-allowed@^1.0.0, is-retry-allowed@^1.1.0:
+is-retry-allowed@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/is-retry-allowed/-/is-retry-allowed-1.1.0.tgz#11a060568b67339444033d0125a61a20d564fb34"
   integrity sha1-EaBgVotnM5REAz0BJaYaINVk+zQ=
@@ -4597,14 +4551,6 @@ no-case@^2.2.0:
   dependencies:
     lower-case "^1.1.1"
 
-node-fetch@^1.6.3:
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-1.7.3.tgz#980f6f72d85211a5347c6b2bc18c5b84c3eb47ef"
-  integrity sha512-NhZ4CsKx7cYm2vSrBAr2PvFOe6sWDf0UYLRqA6svUYg7+/TSfVAu49jYC4BvQ4Sms9SZgdqGBgroqfDhJdTyKQ==
-  dependencies:
-    encoding "^0.1.11"
-    is-stream "^1.0.1"
-
 node-modules-regexp@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/node-modules-regexp/-/node-modules-regexp-1.0.0.tgz#8d9dbe28964a4ac5712e9131642107c71e90ec40"
@@ -4648,11 +4594,6 @@ nodemon@^1.18.9:
     touch "^3.1.0"
     undefsafe "^2.0.2"
     update-notifier "^2.5.0"
-
-noop2@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/noop2/-/noop2-2.0.0.tgz#4b636015e9882b54783c02b412f699d8c5cd0a5b"
-  integrity sha1-S2NgFemIK1R4PAK0EvaZ2MXNCls=
 
 nopt@^4.0.1:
   version "4.0.1"
@@ -5327,11 +5268,6 @@ radio-symbol@^2.0.0:
     ansi-gray "^0.1.1"
     ansi-green "^0.1.1"
     is-windows "^1.0.1"
-
-random-item@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/random-item/-/random-item-1.0.0.tgz#16ee31626cb050c8a1686a5f0f42a6b99a2aaf11"
-  integrity sha1-Fu4xYmywUMihaGpfD0KmuZoqrxE=
 
 range-parser@~1.2.0:
   version "1.2.0"
